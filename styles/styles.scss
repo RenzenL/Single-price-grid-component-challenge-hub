@@ -1,0 +1,114 @@
+@import "./util";
+
+body{
+    font-size: 16px;
+    background-color: $LightGray;
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-content: center;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Karla', sans-serif;
+    line-height: 3ch;
+}
+
+.card{
+    background-color: white;
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px 5px (rgba(0, 0, 0, 0.089));
+    
+    p{
+        margin: 0;
+    }
+
+    .card-top{
+        padding: 1em;
+        h1{
+            color: $Cyan;
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+        span{
+            color: $BrightYellow;
+            display: block;
+            margin-bottom: 0.5em;
+        }
+        p{
+            color: $GrayishBlue;
+        }
+    }
+    .card-middle{
+        background-color: $Cyan;
+        
+        padding: 1em;
+        color: white;
+        h1{
+            font-size: 1.2em;
+            padding-bottom: 0.6em;
+        }
+        .price-Holder{
+            @include flexIt(row,flex-start,center);
+            p{
+                color: $Cyan-lighter;
+                
+            }
+            span{
+                font-size: 2em;
+                font-weight: 700;
+                padding-right: 0.2em;       
+            }
+        }
+        .button-Holder{
+            padding-top: 2em;
+            padding-bottom: 1em;
+            @include flexIt(column,center,center);
+            button{
+                @include buttonStyles();
+            }
+        }
+        }
+        
+        
+    .card-bottom{
+        color: white;
+        background-color: $Cyan-light;
+        border-radius: 0 0 5px 5px;
+        padding: 1em;
+        h1{
+            width: 70%;
+            font-size: 1.2em;
+        }
+        p{
+            width: 70%;
+            color: $LightGray;
+        }
+    }
+}
+
+@media screen and (min-width: 700px){
+    .card{
+
+        .card-top{
+            padding-bottom: 4em;
+            h1{
+                font-size: 1.5em;
+            }
+        }
+        .card-section-bottom{
+            display: flex;
+         }
+         .card-middle{
+             width: 50%;
+             border-radius: 0 0 0 5px;
+             padding-right: 1.5em;
+         }
+         .card-bottom{
+             width: 50%;
+             border-radius: 0 0 5px 0;
+         }
+    }
+    
+}

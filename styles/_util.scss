@@ -1,0 +1,33 @@
+//Colors
+
+//Primary
+
+$Cyan: hsl(179, 62%, 43%);
+$Cyan-light: hsl(179, 52%, 52%);
+$BrightYellow: hsl(71, 73%, 54%);
+
+//Neutral
+
+$LightGray: hsl(204, 43%, 93%);
+$GrayishBlue: hsl(217, 15%, 60%);
+$Cyan-lighter: hsl(179, 72%, 72%);
+
+
+@mixin flexIt ($direction , $jc , $ai){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $direction;
+}
+
+@mixin buttonStyles{
+    background-color: $BrightYellow;
+            color: white;
+            border-style: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px 10px rgba(105, 105, 105, 0.137);
+            font-weight: 700;
+            width: 90%;
+            text-align: center;
+            padding: 1em 6em;
+}
